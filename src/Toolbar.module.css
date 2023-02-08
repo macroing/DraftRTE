@@ -1,0 +1,18 @@
+.toolbar {
+  --background-color: #e3e3e3;
+  --border-color: #b3b3b3;
+
+  align-items: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
+  justify-content: flex-start;
+  user-select: none;
+  width: 100%;
+}

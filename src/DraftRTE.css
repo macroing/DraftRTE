@@ -1,0 +1,198 @@
+.rich-text-editor {
+  --background-color-scrollbar: #e3e3e3;
+  --background-color-scrollbar-thumb: #b3b3b3;
+  --background-color-scrollbar-thumb-hover: #939393;
+  --background-color-scrollbar-track: #e3e3e3;
+  --border-color: #b3b3b3;
+  --border-color-hover: #939393;
+  --border-color-scrollbar: #b3b3b3;
+  --border-color-scrollbar-thumb: #b3b3b3;
+  --border-color-scrollbar-thumb-hover: #939393;
+  --border-color-scrollbar-track: #b3b3b3;
+
+  background: #fff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Georgia", serif;
+  font-size: 14px;
+  padding: 0px;
+}
+
+.rich-text-editor > .editor {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2) inset;
+  cursor: text;
+  font-size: 16px;
+  height: 100%;
+  overflow: auto;
+  padding: 15px;
+  width: 100%;
+}
+
+.rich-text-editor > .editor::-webkit-scrollbar {
+  background-color: var(--background-color-scrollbar);
+  border: 1px solid var(--border-color-scrollbar);
+}
+
+.rich-text-editor > .editor::-webkit-scrollbar-corner {
+  background-color: var(--background-color-scrollbar);
+  border: 1px solid var(--border-color-scrollbar);
+}
+
+.rich-text-editor > .editor::-webkit-scrollbar-track {
+  background-color: var(--background-color-scrollbar-track);
+  border: 1px solid var(--border-color-scrollbar-track);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.rich-text-editor > .editor::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+  background-color: var(--background-color-scrollbar-thumb);
+  border: 1px solid var(--border-color-scrollbar-thumb);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  height: 20px;
+}
+
+.rich-text-editor > .editor::-webkit-scrollbar-thumb:vertical {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+  background-color: var(--background-color-scrollbar-thumb);
+  border: 1px solid var(--border-color-scrollbar-thumb);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  width: 20px;
+}
+
+.rich-text-editor > .editor::-webkit-scrollbar-thumb:hover {
+  background-color: var(--background-color-scrollbar-thumb-hover);
+  border: 1px solid var(--border-color-scrollbar-thumb-hover);
+  cursor: pointer;
+}
+
+.rich-text-editor.rich-text-editor_read-only {
+  border: none;
+  padding: 0px;
+}
+
+.rich-text-editor.rich-text-editor_read-only > .editor {
+  border-top: none;
+  margin-top: 0px;
+}
+
+/*
+ * Handle blockquote:
+ */
+
+.rich-text-editor > .editor .blockquote {
+  border-left: 5px solid #eee;
+  color: #666;
+  font-family: "Hoefler Text", "Georgia", serif;
+  font-style: italic;
+  margin: 16px 0;
+  padding: 10px 20px;
+}
+
+/*
+ * Handle text alignment:
+ */
+
+.rich-text-editor > .editor .center {
+  text-align: center;
+}
+
+.rich-text-editor > .editor .center > .public-DraftStyleDefault-block.public-DraftStyleDefault-ltr {
+  text-align: center;
+}
+
+.rich-text-editor > .editor .justify {
+  text-align: justify;
+}
+
+.rich-text-editor > .editor .justify > .public-DraftStyleDefault-block.public-DraftStyleDefault-ltr {
+  text-align: justify;
+}
+
+.rich-text-editor > .editor .left {
+  text-align: left;
+}
+
+.rich-text-editor > .editor .left > .public-DraftStyleDefault-block.public-DraftStyleDefault-ltr {
+  text-align: left;
+}
+
+.rich-text-editor > .editor .right {
+  text-align: right;
+}
+
+.rich-text-editor > .editor .right > .public-DraftStyleDefault-block.public-DraftStyleDefault-ltr {
+  text-align: right;
+}
+
+/*
+ * Override CSS in Draft.js:
+ */
+
+.rich-text-editor > .editor .DraftEditor-root {
+  height: 100%;
+  position: static;
+  width: 100%;
+}
+
+.rich-text-editor > .editor .DraftEditor-editorContainer {
+  height: 100%;
+  position: static;
+  width: 100%;
+}
+
+.rich-text-editor > .editor .public-DraftEditor-block {
+  position: static;
+}
+
+.rich-text-editor > .editor .public-DraftEditorPlaceholder-root {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.rich-text-editor > .editor .public-DraftEditor-content {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.rich-text-editor > .editor .public-DraftStyleDefault-pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.rich-text-editor > .editor.hide_placeholder .public-DraftEditorPlaceholder-root {
+  display: none;
+}
+
+.rich-text-editor.rich-text-editor_read-only {
+  box-shadow: none;
+}
+
+.rich-text-editor.rich-text-editor_read-only > .editor {
+  box-shadow: none;
+  height: auto;
+  overflow: visible;
+  padding: 0px;
+  width: auto;
+}
+
+.rich-text-editor.rich-text-editor_read-only > .editor .public-DraftEditorPlaceholder-root {
+  margin: 0 0px 0px;
+  padding: 0px;
+}
+
+.rich-text-editor.rich-text-editor_read-only > .editor .public-DraftEditor-content {
+  margin: 0 0px 0px;
+  padding: 0px;
+}
+
+.rich-text-editor.rich-text-editor_outline > .editor *:hover {
+  outline: 1px solid var(--border-color-hover);
+  outline-style: dotted;
+}

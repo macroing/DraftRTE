@@ -1,0 +1,95 @@
+.button {
+  --background-color: #e3e3e3;
+  --background-color-active: #e3e3e3;
+  --background-color-active-hover: #d3d3d3;
+  --background-color-disabled: #d3d3d3;
+  --background-color-hover: #d3d3d3;
+  --border-color: #b3b3b3;
+  --border-color-active: #5890ff;
+  --border-color-active-hover: #5890ff;
+  --border-color-disabled: #a3a3a3;
+  --border-color-hover: #a3a3a3;
+  --color: #434343;
+  --color-active: #5890ff;
+  --color-active-hover: #5890ff;
+  --color-disabled: #a3a3a3;
+  --color-hover: #434343;
+
+  align-items: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  color: var(--color);
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  height: 40px;
+  justify-content: center;
+  margin: 1px;
+  padding: 5px;
+  text-align: center;
+  width: 40px;
+}
+
+.button:hover {
+  background-color: var(--background-color-hover);
+  border-color: var(--border-color-hover);
+  color: var(--color-hover);
+}
+
+.button.active {
+  background-color: var(--background-color-active);
+  border-color: var(--border-color-active);
+  color: var(--color-active);
+}
+
+.button.active:hover {
+  background-color: var(--background-color-active-hover);
+  border-color: var(--border-color-active-hover);
+  color: var(--color-active-hover);
+}
+
+.button.button_border_left {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.button.button_border_right {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.button:disabled {
+  background: none;
+  background-color: var(--background-color-disabled);
+  border-color: var(--border-color-disabled);
+  color: var(--color-disabled);
+  cursor: default;
+}
+
+.button > h1 {
+  margin: 0px;
+}
+
+.button > h2 {
+  margin: 0px;
+}
+
+.button > h3 {
+  margin: 0px;
+}
+
+.button > h4 {
+  margin: 0px;
+}
+
+.button > h5 {
+  margin: 0px;
+}
+
+.button > h6 {
+  margin: 0px;
+}
